@@ -12,7 +12,7 @@ let PlatformSchema = new Schema(
 PlatformSchema
 .virtual('url')
 .get(function () {
-    return '/category/platform' + this._id;
+    return '/genres' + this._id;
 });
 
 module.exports = mongoose.model('Platform', PlatformSchema);

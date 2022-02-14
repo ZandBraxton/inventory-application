@@ -11,7 +11,7 @@ let GenreSchema = new Schema(
 GenreSchema
 .virtual('url')
 .get(function () {
-    return '/category/genre' + this._id;
+    return '/platforms/' + this._id;
 });
 
 module.exports = mongoose.model('Genre', GenreSchema);
