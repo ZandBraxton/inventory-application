@@ -2,6 +2,24 @@ doctype html
 html
   head
     title= title
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/reset.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    header
+      block navbar
+        nav
+          h1(class='title') Gamestation
+          ul(class='list-container') 
+            li
+             a(href='/') Home
+            li 
+             a(href='/platforms') Games
+            li 
+             a(href='/platforms') Platforms
+            li 
+             a(href='/platforms') Genres
+
+
     block content
