@@ -4,15 +4,24 @@ extends layout
 block content
   h1= title
 
-  ul
+  ul(class="grid-container")
     each game in game_list
       li
-        a(href=game.url) #{game.title}
-        |  (#{"$" + game.price})
-        each val, index in game.platform
-            a(href=val.url) #{val.name}
-            if index < game.platform.length - 1
-                |, 
+        div(class="game-container")
+          div(class="img-placeholder")
+          p(class="game-price") #{"$" + game.price}
+          a(class="game-title" href=game.url) #{game.title}
+          div(class='game-platforms')
+            each val, index in game.platform
+                a(href=val.url) #{val.name}
+                if index < game.platform.length - 1
+                    |, 
 
     else
       li There are no games.
+
+    a(href='/video-games/add') Add Game
+
+    //- form(action='' method='post' enctype='multipart/form-data')
+    //-   input(type='file' name='uploaded_file')
+    //-   input(type='submit' value='Upload File')

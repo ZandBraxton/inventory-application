@@ -14,8 +14,14 @@ router.get('/', function(req, res, next) {
 //All games
 router.get('/video-games', game_controller.game_list);
 
+
+router.get('/video-games/add', game_controller.game_create_get)
+
+router.post('/video-games/add', game_controller.game_create_post)
+
 //Single Game
 router.get('/video-games/game/:id', game_controller.game_detail);
+
 
 
 

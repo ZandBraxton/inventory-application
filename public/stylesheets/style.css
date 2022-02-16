@@ -44,3 +44,49 @@ nav {
 .list-container li a:hover {
   text-decoration: underline;
 }
+
+
+
+
+/* Game list */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: auto;
+  height: auto;
+  gap: 2em;
+  padding: 1em;
+}
+
+.game-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+}
+
+.img-placeholder {
+  height: 200px;
+  width: 150px;
+  margin: auto;
+  background-color: aqua;
+  margin-bottom: 0.6rem;
+}
+
+.game-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.game-title {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0.4rem;
+}
+
+.game-platforms, .game-platforms a {
+  font-size: 0.6rem;
+  color: #2b2b2b8e;
+  line-height: 1.2rem;
+}

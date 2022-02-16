@@ -1,6 +1,8 @@
 require('dotenv').config();
 let createError = require('http-errors');
 let express = require('express');
+const multer = require('multer')
+const upload = multer({ dest: './public/images'})
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
@@ -47,5 +49,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+app.post('/video-games', upload.single('uploaded_file'), function (req, res, next) {
+  // req.file is the `avatar` file
+  // req.body will hold the text fields, if there were any
+})
+
+
 
 module.exports = app;
